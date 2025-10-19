@@ -1,0 +1,84 @@
+:root{
+  --bg:#05060a;
+  --panel:#071226;
+  --muted:#9aa8b2;
+  --neon:#00f5c4;
+  --accent:#6c5ce7;
+  --glass: rgba(255,255,255,0.03);
+  --card-shadow: 0 8px 30px rgba(2,6,23,0.7);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+body{background: radial-gradient(ellipse at center, rgba(6,10,22,0.7), rgba(2,4,8,1) 60%), #000; color:#cfeff0; overflow:auto}
+
+.bg-grid{
+  position:fixed; inset:0; background-image: linear-gradient(0deg, rgba(0,0,0,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.25) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px; opacity:0.12; z-index:0;
+}
+
+/* Layout */
+.container{position:relative; display:flex; gap:20px; padding:28px; max-width:1200px; margin:28px auto; z-index:2}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; box-shadow:var(--card-shadow); padding:18px;}
+
+/* Left column */
+.left{width:320px; display:flex; flex-direction:column; gap:12px; align-items:center}
+.logo{font-weight:700; letter-spacing:2px; color:var(--neon); font-size:20px; align-self:flex-start}
+.logo .dot{color:var(--accent)}
+.profile{width:100%; text-align:center}
+.avatar{width:180px; height:180px; border-radius:12px; object-fit:cover; border:4px solid rgba(0,0,0,0.4); box-shadow:0 8px 30px rgba(16,24,40,0.6)}
+.profile h1{margin:12px 0 4px 0; font-size:20px}
+.role{color:var(--muted); font-size:13px; margin:0}
+
+/* contacts / skills */
+.contacts{display:flex; flex-direction:column; gap:8px; width:100%}
+.contact-btn{display:block; text-decoration:none; background:linear-gradient(90deg,var(--neon), var(--accent)); color:#021014; padding:10px 12px; border-radius:8px; font-weight:600; text-align:center}
+.skills{width:100%; text-align:left}
+.skills h3{margin:6px 0 6px 0; color:var(--neon); font-size:13px}
+.skills ul{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.skills li{background:var(--glass); padding:8px 10px; border-radius:6px; color:var(--muted); font-size:13px}
+
+/* Right column */
+.right{flex:1; display:flex; flex-direction:column; gap:12px;}
+
+/* topbar */
+.topbar{display:flex; justify-content:space-between; align-items:center; padding-bottom:6px}
+.title{font-family:monospace; color:var(--neon); font-size:13px}
+.status{color:var(--muted)} .status .online{color:#7ef6c6; font-weight:700}
+
+/* dashboard grid */
+.dashboard{display:grid; grid-template-columns: 1fr 380px; gap:14px; align-items:start}
+
+/* cards */
+.card{background:linear-gradient(180deg, rgba(8,12,20,0.6), rgba(6,8,12,0.4)); border-radius:10px; padding:14px; border:1px solid rgba(255,255,255,0.02)}
+.card h2{margin:0 0 8px 0; color:var(--neon); font-size:16px}
+.card p{color:var(--muted); line-height:1.5}
+
+/* terminal */
+.terminal{min-height:240px; display:flex; flex-direction:column}
+.term-header{font-family:monospace; color:var(--accent); font-size:13px; margin-bottom:8px}
+.term-output{background:#021016; color:var(--neon); padding:12px; border-radius:6px; font-family:monospace; font-size:13px; height:100%; overflow:auto; white-space:pre-wrap}
+
+/* projects/info */
+.info .meta{display:flex; gap:12px; margin-top:12px}
+.info .meta div{flex:1; background:rgba(255,255,255,0.02); padding:10px; border-radius:8px; text-align:left}
+.info .meta strong{display:block; color:var(--neon); font-size:12px}
+.projects ul{margin:0; padding-left:18px; color:var(--muted)}
+
+/* scanner panel styles */
+.scanner .muted{color:var(--muted); font-size:13px}
+.scanner-controls{display:flex; gap:8px; margin-top:10px; align-items:center}
+.scanner-controls input{flex:1; padding:10px 12px; border-radius:8px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); color:var(--neon); font-family:monospace}
+.run-btn{background:linear-gradient(90deg,var(--neon),var(--accent)); color:#021014; padding:8px 12px; border-radius:8px; border:none; cursor:pointer; font-weight:700}
+.abort-btn{background:transparent; color:#ff6b6b; border:1px solid rgba(255,107,107,0.12); padding:8px 12px; border-radius:8px; cursor:pointer}
+.scan-output{background:#00131a; color:var(--neon); padding:12px; margin-top:10px; border-radius:6px; height:160px; overflow:auto; font-family:monospace; font-size:13px; white-space:pre-wrap}
+
+/* footer */
+.panel-footer{font-size:12px; color:var(--muted); margin-top:10px; align-self:flex-start}
+
+/* Responsive */
+@media (max-width:980px){
+  .container{flex-direction:column; padding:12px; max-width:720px}
+  .left{width:100%; flex-direction:row; align-items:center}
+  .avatar{width:96px;height:96px}
+  .dashboard{grid-template-columns:1fr}
+}

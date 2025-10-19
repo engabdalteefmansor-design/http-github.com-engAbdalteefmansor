@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Abdalteef Mansor — Cybersecurity Expert</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="container">
+    <aside class="panel left">
+      <div class="logo">AMS<span class="dot">.</span></div>
+      <div class="profile">
+        <img src="profile.jpg" alt="Abdalteef Mansor" class="avatar"/>
+        <h1>Abdalteef Mansor</h1>
+        <p class="role">Cybersecurity Expert</p>
+      </div>
+      <nav class="contacts">
+        <a href="mailto:engabdalteefmansor@gmail.com" class="contact-btn">✉️ Email</a>
+        <a href="https://github.com/" target="_blank" class="contact-btn"> GitHub</a>
+        <a href="#" class="contact-btn">🔗 LinkedIn</a>
+      </nav>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Ethical Hacking</li>
+          <li>Penetration Testing</li>
+          <li>Kali Linux</li>
+          <li>Vulnerability Analysis</li>
+          <li>Network Security</li>
+        </ul>
+      </div>
+      <footer class="panel-footer">© Abdalteef Mansor</footer>
+    </aside>
+
+    <main class="panel right">
+      <header class="topbar">
+        <div class="title">CYBER OPS — PROFILE</div>
+        <div class="status">Status: <span class="online">ONLINE</span></div>
+      </header>
+
+      <section class="dashboard">
+        <div class="card terminal">
+          <div class="term-header">Terminal</div>
+          <pre id="terminal" class="term-output" aria-hidden="false"></pre>
+        </div>
+
+        <div class="card info">
+          <h2>About</h2>
+          <p>I provide specialized consulting and solutions in Ethical Hacking, Cybersecurity, and Kali Linux techniques to secure systems and provide legal access to social media accounts. Experienced in penetration testing, vulnerability analysis, and securing web and network environments.</p>
+          <div class="meta">
+            <div><strong>Email</strong><span>engabdalteefmansor@gmail.com</span></div>
+            <div><strong>Location</strong><span>Remote / Confidential</span></div>
+            <div><strong>Available</strong><span>For Consulting</span></div>
+          </div>
+        </div>
+
+        <div class="card projects">
+          <h2>Highlighted Projects</h2>
+          <ul>
+            <li><strong>Web App Pentest</strong> — Comprehensive security audit and exploit validation.</li>
+            <li><strong>Custom Kali Toolkit</strong> — Automated scripts for pentesting workflows.</li>
+            <li><strong>Social Media Security</strong> — Legal access & account protection services.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Fake Scanner Panel -->
+      <section style="margin-top:12px;">
+      <div class="card scanner" id="scanner-card">
+        <h2>Interactive Scanner</h2>
+        <p class="muted">Enter a target ID (any number) and run the fake scan. This is a simulated demo for presentation only.</p>
+        <div class="scanner-controls">
+          <input id="scan-input" type="text" placeholder="Enter target ID (e.g. 12345)" />
+          <button id="scan-btn" class="run-btn">Run Scan</button>
+          <button id="abort-btn" class="abort-btn" style="display:none">Abort</button>
+        </div>
+        <pre id="scan-output" class="scan-output" aria-live="polite"></pre>
+      </div>
+      </section>
+
+    </main>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
